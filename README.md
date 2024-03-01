@@ -2,7 +2,7 @@
 
 by: LLOYD DRAIZEN L. MARTIREZ
 
-[My Published app](https://martirez-cs3b-0latcq7265yf.streamlit.app/)
+[My Published app](https://martirezcs3b.streamlit.app/)
 
 This is the app you get when you run `streamlit hello`, extracted as its own app.
 
