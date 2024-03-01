@@ -1,10 +1,5 @@
 import streamlit as st
 
-st.set_page_config(
-        page_title="Caesar Cipher",
-        page_icon="👋",
-    )
-
 def encrypt_decrypt(text, shift_keys, ifdecrypt):
     """
     Encrypts a text using Caesar Cipher with a list of shift keys.
