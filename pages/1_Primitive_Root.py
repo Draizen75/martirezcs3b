@@ -1,5 +1,10 @@
 import streamlit as st
 
+st.set_page_config(
+        page_title="Primitive Root",
+        page_icon="👋",
+    )
+
 def is_primitive(q,g):
     def mod_pow(base, exponent, modulos):
         result = 1
