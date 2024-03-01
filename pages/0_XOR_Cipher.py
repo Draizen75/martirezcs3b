@@ -1,10 +1,5 @@
 import streamlit as st
 
-st.set_page_config(
-        page_title="XOR Cipher",
-        page_icon="👋",
-    )
-
 def xor_encrypt(plaintext, key):
     """Encrypts plaintext using XOR cipher with the given key, printing bits involved."""
 
@@ -28,6 +23,10 @@ def xor_decrypt(ciphertext, key):
 
 
 # Example usage:
+st.set_page_config(
+        page_title="XOR Cipher",
+        page_icon="👋",
+    )
 st.write("# Welcome To XOR Cipher🔒🔒🔒")
 plaintext = bytes(st.text_area("Plaintext:").encode())
 key = bytes(st.text_area("Key:").encode())
