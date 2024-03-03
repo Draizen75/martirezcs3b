@@ -1,4 +1,12 @@
 import streamlit as st
+from nav import navi
+
+st.set_page_config(
+    page_title="Block Cipher",
+    page_icon="🔒",
+    layout="wide"
+)
+navi()
 
 def pad(data, block_size):    # CMS (Cryptographic Message Syntax). This pads with the same value as the number of padding bytes.
     # Calculate the number of bytes needed to reach a multiple of block size.

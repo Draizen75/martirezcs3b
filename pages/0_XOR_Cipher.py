@@ -1,4 +1,13 @@
 import streamlit as st
+from nav import navi
+
+st.set_page_config(
+    page_title="XOR Cipher",
+    page_icon="🔒",
+    layout="wide"
+)
+navi()
+
 
 def xor_encrypt(plaintext, key):
     """Encrypts plaintext using XOR cipher with the given key, printing bits involved."""

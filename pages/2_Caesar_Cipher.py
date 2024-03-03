@@ -1,4 +1,12 @@
 import streamlit as st
+from nav import navi
+
+st.set_page_config(
+    page_title="Caesar Cipher",
+    page_icon="🔒",
+    layout="wide"
+)
+navi()
 
 def encrypt_decrypt(text, shift_keys, ifdecrypt):
     """
