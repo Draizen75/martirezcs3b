@@ -42,10 +42,11 @@ if st.button("Encrypt!"):
     elif len(plaintext.decode()) < len(key.decode()):
         st.write("Plaintext length should be equal or greater than the length of key")
     else:
+        col1, col2 = st.columns(2)
+    with col1:
         encrypt = xor_encrypt(plaintext, key)
-        st.write("Ciphertext:", encrypt.decode())
-        
+        st.write("## Ciphertext:", encrypt.decode())
+
+    with col2:
         decrypt = xor_decrypt(encrypt, key)
-        st.write("Decrypted:", decrypt.decode())
-
-
+        st.write("## Decrypted:", decrypt.decode())
