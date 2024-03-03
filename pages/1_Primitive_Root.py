@@ -32,16 +32,23 @@ def is_primitive(q,g):
     
     is_primitive = g in primitive_roots
     if is_primitive == False:
-        st.write(f"{g} is NOT primitive root of {q} - List of Primitive roots: {primitive_roots}")
+        st.write(f"{g} is NOT primitive root of {q} \n\n List of Primitive roots: {primitive_roots}")
     else:
         st.write(f"{g} is primitive root: {is_primitive} {primitive_roots}")
 
 if __name__ =="__main__":
     st.write("# Welcome To Primitive Root🔒🔒🔒")
+    st.markdown(
+        """
+        It will check if the guess number is a primitive root of the prime number...
+        
+    """
+    )
     q = st.number_input("Enter a prime number", step = 1)
     g = st.number_input("Guess a primitive root of prime number", step = 1)
     
-    if st.button("Encrypt!"):
+    if st.button("Verify!"):
+        st.balloons()
         if q > 1:
             for i in range(2, int(q / 2)+1):
                 if (q % i) == 0:
