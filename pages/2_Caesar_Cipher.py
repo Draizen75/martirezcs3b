@@ -44,15 +44,20 @@ if __name__ == "__main__":
     shift_keys = list(map(int, st.text_area("Shift Keys:").split()))
 
     if st.button("Encrypt"):
-        encrypt, cipher_output = encrypt_decrypt(text, shift_keys, ifdecrypt=False)
-        st.write(cipher_output)
-        st.write('-' * 10)
-        
-        decrypt, decrypt_output = encrypt_decrypt(encrypt, shift_keys, ifdecrypt=True)
-        st.write(decrypt_output)
-        st.write('-' * 10)
-        
-        st.write("Text:",text)
-        st.write("Shift keys:", ' '.join(map(str, shift_keys)))
-        st.write("Cipher:", encrypt)
-        st.write("Decrypted text:", decrypt)
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.write("## ENCRYPTED PROCESS")
+            encrypt, cipher_output = encrypt_decrypt(text, shift_keys, ifdecrypt=False)
+            st.write(cipher_output)
+           
+        with col2:
+            st.write("## DECRYPTED PROCESS")
+            decrypt, decrypt_output = encrypt_decrypt(encrypt, shift_keys, ifdecrypt=True)
+            st.write(decrypt_output)
+           
+        with col3:
+            st.write("## RESULTS")
+            st.write("Text:",text)
+            st.write("Shift keys:", ' '.join(map(str, shift_keys)))
+            st.write("Cipher:", encrypt)
+            st.write("Decrypted text:", decrypt)

@@ -92,14 +92,17 @@ if __name__ == "__main__":
             key = pad(key, block_size)   # Pad the key
         # Define the block size for encryption (adjust according to your needs)
         # Encryption
-            encrypt = xor_encrypt(plaintext, key, block_size)
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                encrypt = xor_encrypt(plaintext, key, block_size)
             # Decryption
-            decrypt = xor_decrypt(encrypt, key, block_size)
-            
-            st.write("\nOriginal plaintext:", plaintext)
-            st.write("Key byte      :", key)
-            st.write("Key hex       :", key.hex())
-            st.write("Encrypted data:", encrypt.hex())  # st.write encrypted data in hexadecimal format
-            st.write("Decrypted data:", decrypt.hex())
-            st.write("Decrypted data:", decrypt)
+            with col2:
+                decrypt = xor_decrypt(encrypt, key, block_size)
+            with col3:
+                st.write("\nOriginal plaintext:", plaintext)
+                st.write("Key byte      :", key)
+                st.write("Key hex       :", key.hex())
+                st.write("Encrypted data:", encrypt.hex())  # st.write encrypted data in hexadecimal format
+                st.write("Decrypted data:", decrypt.hex())
+                st.write("Decrypted data:", decrypt)
 
